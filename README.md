@@ -7,7 +7,7 @@
 - Inside the environment, install requirements ```pip install -r requirements.txt```
 - Modify _necessary parameters_ inside **run.py**
 - Run ```python run.py```
-- When the browser is opened, change _Display records_ per page from 10 to **All** [[Screenshot]()]
+- When the browser is opened, change _Display records_ per page from 10 to **All** [[Screenshot](https://user-images.githubusercontent.com/20050426/156389364-8a6e12b7-16e9-47fe-9847-4fc70d323e80.png)]
 - Type ```ok``` in terminal and hit enter
 - Enjoy ☕️
 
@@ -28,4 +28,3 @@
 - Voice feedback is tested only on **macOS**
 - Download the latest or suitable version for Chrome from https://chromedriver.chromium.org/downloads
 - Download the latest or suitable version for Firefox Geckodriver from https://github.com/mozilla/geckodriver/releases
-
