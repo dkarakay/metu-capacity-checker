@@ -1,11 +1,15 @@
-# METU Capacity Checker
+# METU Auto Capacity Checker
 
 ## Installation
 - Download **Chrome Webdriver** or **Firefox Geckodriver**
-- Locate it somewhere to reach
+- Locate it somewhere to easily reach
 - Create Python environment using ```mkvirtualenv capacity-checker -p Python3```
-- Add _necessary parameters_ inside **run.py**
+- Inside the environment, install requirements ```pip install -r requirements.txt```
+- Modify _necessary parameters_ inside **run.py**
 - Run ```python run.py```
+- When the browser is opened, change _Display records_ per page from 10 to **All** [[Screenshot]()]
+- Type ```ok``` in terminal and hit enter
+- Enjoy ☕️
 
 ## Parameters
 
