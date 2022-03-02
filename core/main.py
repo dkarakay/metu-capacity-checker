@@ -12,6 +12,7 @@ def auto_checker(
         refresh_rate: int,
         section_no: int,
         semester: str,
+        voice_feedback:bool,
 ):
     # Run Chrome Driver
     driver = webdriver.Chrome(executable_path=driver_path)
@@ -48,13 +49,14 @@ def auto_checker(
             capacity = int(driver.execute_script(js_cap))
             used = int(driver.execute_script(js_used))
 
-            # Voice based output for OS & Linux
-            if capacity == 0:
-                os.system('say "0 capacity"')
-            elif capacity - used > 0:
-                os.system(f'say "Found capacity {capacity - used}"')
-            elif capacity == used:
-                os.system('say "Capacity full"')
+            if voice_feedback:
+                # Voice feedback for macOS
+                if capacity == 0:
+                    os.system('say "0 capacity"')
+                elif capacity - used > 0:
+                    os.system(f'say "Found capacity {capacity - used}"')
+                elif capacity == used:
+                    os.system('say "Capacity full"')
 
             current_time = datetime.now().time()
 

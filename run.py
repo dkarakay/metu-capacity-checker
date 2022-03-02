@@ -2,8 +2,8 @@ from core.main import auto_checker
 
 semester = '20212'  # 2021-2022 Spring
 department_code = '567'  # Electrical Electronics Engineering
-class_code = '306'  # Digital Circuits Laboratory
-section_no = 1  # Section 8
+class_code = '314'  # Digital Circuits Laboratory
+section_no = 8  # Section 8
 
 driver_path = "/Users/sedna/chromedriver"
 refresh_rate = 7
@@ -15,4 +15,5 @@ auto_checker(
     refresh_rate=refresh_rate,
     section_no=section_no,
     semester=semester,
+    voice_feedback=True,
 )
