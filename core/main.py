@@ -12,7 +12,7 @@ def auto_checker(
         refresh_rate: int,
         section_no: int,
         semester: str,
-        voice_feedback:bool,
+        voice_feedback: bool,
 ):
     # Run Chrome Driver
     driver = webdriver.Chrome(executable_path=driver_path)
@@ -34,13 +34,15 @@ def auto_checker(
         driver.execute_script(i)
 
     print(key_code)
+
+    # Get index script
     js_key = js.get_index(key_code=key_code)
 
     try:
         class_index = int(driver.execute_script(js_key))
-        class_index += 1
 
         # For getting correct section
+        class_index += 1
 
         js_name, js_cap, js_used = js.get_data(class_index=class_index)
 
@@ -58,6 +60,7 @@ def auto_checker(
                 elif capacity == used:
                     os.system('say "Capacity full"')
 
+            # Get current time
             current_time = datetime.now().time()
 
             # Print current of the course
@@ -70,4 +73,4 @@ def auto_checker(
             time.sleep(refresh_rate)
 
     except:
-        print("Check course details again")
+        print("Please check course details and try again")
