@@ -1,6 +1,7 @@
 import time
 import os
 from selenium import webdriver
+from datetime import datetime
 
 # Download specific browser driver and give its path
 driver_path = "/Users/sedna/chromedriver"
@@ -9,15 +10,20 @@ driver = webdriver.Chrome(executable_path=driver_path)
 # Sis website link
 department_code = '567'  # Electrical Electronics Engineering
 semester = '20212'  # 2021-2022 Spring
+class_index = 51
+
+refresh_rate_per_second = 7
 
 web_site = f"https://sis.metu.edu.tr/get.php?package" \
            f"=-61WpvQxa3pjp9nkYWGoWkJLjUQew_4jPmQNlJf1_nCS4_CpVuwmJkHdZsh9KV5OHAZYt6pSaWlUijcU6m1JFw#/?selectSemester" \
            f"={semester}&selectProgram={department_code}&submitSearchForm=Search"
 driver.get(web_site)
 
-time.sleep(12)
+while True:
+    # Type ok when you select display all
+    if input('enter if you entered all places correctly: ') == 'ok':
+        break
 
-class_index = 51
 js = [
     # Show Capacity
     'document.getElementById("SearchResults_column_toggler").getElementsByClassName("checker")[12].firstChild.firstChild.click();',
@@ -39,6 +45,7 @@ while True:
     capacity = int(driver.execute_script(js[3]))
     used = int(driver.execute_script(js[4]))
 
+    # Voice based output for OS & Linux
     if capacity == 0:
         os.system('say "0 capacity"')
     elif capacity - used > 0:
@@ -46,7 +53,10 @@ while True:
     elif capacity == used:
         os.system('say "Capacity full"')
 
-    print(f"{name} Cap:{capacity} Used:{used}")
+    current_time = datetime.now().time()
+
+    # Print details of the course
+    print(f"{current_time} - {name} Cap:{capacity} Used:{used}")
 
     driver.refresh();
-    time.sleep(7)
+    time.sleep(refresh_rate_per_second)
