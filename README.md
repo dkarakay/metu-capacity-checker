@@ -10,7 +10,7 @@
 - Run ```python run.py```
 - ~~When the browser is opened, change _Display records_ per page from 10 to All~~
 - Thanks to [@ardaozarslan](https://github.com/ardaozarslan) for his great contribution!
-- Just type ```ok``` in terminal and hit enter
+- When the website is loaded correctly, type ```ok``` in terminal and hit enter
 - Enjoy ☕️
 
 ## Parameters
