@@ -6,7 +6,7 @@ class_code = '314'  # Digital Circuits Laboratory
 section_no = 8  # Section 8
 
 driver_path = "/Users/sedna/chromedriver"
-refresh_rate = 7
+refresh_rate = 7  # Check each 7 seconds
 
 auto_checker(
     class_code=class_code,
