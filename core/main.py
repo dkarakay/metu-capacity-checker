@@ -17,6 +17,7 @@ def auto_checker(
     # Run Chrome Driver
     driver = webdriver.Chrome(executable_path=driver_path)
 
+    # Key Code for getting course details
     key_code = f'{department_code}0{class_code}|{semester}|{department_code}|{section_no}'
 
     # Open website sis.metu.edu.tr
@@ -26,8 +27,8 @@ def auto_checker(
     driver.get(web_site)
 
     while True:
-        # Type ok when you select display all
-        if input('Enter "ok" if you display all courses: ') == 'ok':
+        # Type ok when the website is loaded correctly
+        if input('Enter "ok" if the website is loaded correctly') == 'ok':
             break
 
     for i in js.show:
