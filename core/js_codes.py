@@ -6,6 +6,12 @@ show = [
     # Show Used Capacity
     'document.getElementById("SearchResults_column_toggler").getElementsByClassName("checker")['
     '13].firstChild.firstChild.click();',
+    
+    # Show All Courses
+    '(function ($) {
+        $('select[name="SearchResults_length"]').val('-1');
+        $('select[name="SearchResults_length"]').trigger("change");
+    }).call(this, jQuery);'
 ]
 
 
