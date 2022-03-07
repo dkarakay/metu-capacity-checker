@@ -1,5 +1,7 @@
 import time
 import os
+
+import telegram_send
 from selenium import webdriver
 from datetime import datetime
 import core.js_codes as js
@@ -12,6 +14,7 @@ def auto_checker(
         refresh_rate: int,
         section_no: int,
         semester: str,
+        telegram_bot: bool,
         voice_feedback: bool,
 ):
     # Run Chrome Driver
@@ -60,6 +63,10 @@ def auto_checker(
                     os.system(f'say "Found capacity {capacity - used}"')
                 elif capacity == used:
                     os.system('say "Capacity full"')
+
+            if telegram_bot:
+                if capacity - used > 0:
+                    telegram_send.send(messages=[f"Found capacity {capacity - used}"])
 
             # Get current time
             current_time = datetime.now().time()

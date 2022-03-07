@@ -15,5 +15,6 @@ auto_checker(
     refresh_rate=refresh_rate,
     section_no=section_no,
     semester=semester,
+    telegram_bot=True,
     voice_feedback=True,
 )

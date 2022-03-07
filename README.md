@@ -13,6 +13,14 @@
 - When the website is loaded correctly, type ```ok``` in terminal and hit enter
 - Enjoy ☕️
 
+## Telegram Installation
+
+- Create a bot on Telegram talking with BotFather
+- Run ```telegram-send --configure``` on terminal
+- Insert the created bot token
+- Enter the shown password in your Telegram Chat
+- Voila 🎉
+
 ## Parameters
 
 | Parameter             | Type   | Notes                                                           |
@@ -23,6 +31,7 @@
 | ```refresh_rate```    | int    | Refresh rate for checker in seconds _e.g. 5_                    |
 | ```section_no```      | int    | Section no _e.g. 1_                                             |
 | ```semester```        | string | Semester code _e.g. 20212 (2021-2022 Spring)_                   |
+| ```telegram_bot```    | bool   | True if you want Telegram Message for available capacity.       |
 | ```voice_feedback```  | bool   | True if you want voice feedback. _Tested only on macOS_         |
 
 ## Notes
