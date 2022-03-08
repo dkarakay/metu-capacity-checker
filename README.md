@@ -8,8 +8,6 @@
 - Inside the environment, install requirements ```pip install -r requirements.txt```
 - Modify _necessary parameters_ inside **run.py**
 - Run ```python run.py```
-- ~~When the browser is opened, change _Display records_ per page from 10 to All~~
-- Thanks to [@ardaozarslan](https://github.com/ardaozarslan) for his great contribution!
 - When the website is loaded correctly, type ```ok``` in terminal and hit enter
 - Enjoy ☕️
 
@@ -20,6 +18,14 @@
 - Insert the created bot token
 - Enter the shown password in your Telegram Chat
 - Voila 🎉
+
+## Discord Installation
+
+- Create a custom server and channel to follow course capacity
+- Open the integrations tab while editing your channel,
+- Add a webhook
+- Copy webhook url and paste it to  ```discord_webhook_url``` in ```run.py```
+- Take care 🏖
 
 ## Parameters
 
