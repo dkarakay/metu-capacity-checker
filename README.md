@@ -23,16 +23,18 @@
 
 ## Parameters
 
-| Parameter             | Type   | Notes                                                           |
-|-----------------------|--------|-----------------------------------------------------------------|
-| ```class_code```      | string | Class code  _e.g. 201 (Circuit 1)_                              |
-| ```department_code``` | string | Department code _e.g. 567 (Electrical Electronics Engineering)_ |
-| ```driver_path```     | string | Chromedriver or Firefox Driver path                             |
-| ```refresh_rate```    | int    | Refresh rate for checker in seconds _e.g. 5_                    |
-| ```section_no```      | int    | Section no _e.g. 1_                                             |
-| ```semester```        | string | Semester code _e.g. 20212 (2021-2022 Spring)_                   |
-| ```telegram_bot```    | bool   | True if you want Telegram Message for available capacity.       |
-| ```voice_feedback```  | bool   | True if you want voice feedback. _Tested only on macOS_         |
+| Parameter                 | Type   | Notes                                                                     |
+|---------------------------|--------|---------------------------------------------------------------------------|
+| ```class_code```          | string | Class code  _e.g. 201 (Circuit 1)_                                        |
+| ```department_code```     | string | Department code _e.g. 567 (Electrical Electronics Engineering)_           |
+| ```discord_bot```         | bool   | True if you want Discord Message from your server for available capacity. |
+| ```discord_webhook_url``` | string | Webhook URL for discord                                                   |
+| ```driver_path```         | string | Chromedriver or Firefox Driver path                                       |
+| ```refresh_rate```        | int    | Refresh rate for checker in seconds _e.g. 5_                              |
+| ```section_no```          | int    | Section no _e.g. 1_                                                       |
+| ```semester```            | string | Semester code _e.g. 20212 (2021-2022 Spring)_                             |
+| ```telegram_bot```        | bool   | True if you want Telegram Message for available capacity.                 |
+| ```voice_feedback```      | bool   | True if you want voice feedback. _Tested only on macOS_                   |
 
 ## Notes
 

@@ -8,9 +8,13 @@ section_no = 8  # Section 8
 driver_path = "/Users/sedna/chromedriver"
 refresh_rate = 7  # Check each 7 seconds
 
+discord_webhook_url = 'https://discord.com/api/webhooks/XXXXX'
+
 auto_checker(
     class_code=class_code,
     department_code=department_code,
+    discord_bot=True,
+    discord_webhook_url=discord_webhook_url,
     driver_path=driver_path,
     refresh_rate=refresh_rate,
     section_no=section_no,

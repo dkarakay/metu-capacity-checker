@@ -2,6 +2,7 @@ import time
 import os
 
 import telegram_send
+from discord_webhook import DiscordWebhook
 from selenium import webdriver
 from datetime import datetime
 import core.js_codes as js
@@ -10,6 +11,8 @@ import core.js_codes as js
 def auto_checker(
         class_code: str,
         department_code: str,
+        discord_bot: bool,
+        discord_webhook_url: str,
         driver_path: str,
         refresh_rate: int,
         section_no: int,
@@ -65,9 +68,14 @@ def auto_checker(
                     os.system('say "Capacity full"')
 
             if telegram_bot:
+                # Telegram Bot
                 if capacity - used > 0:
                     telegram_send.send(messages=[f"Found capacity {capacity - used}"])
 
+            if discord_bot:
+                # Discord Bot
+                if capacity - used > 0:
+                    DiscordWebhook(url=discord_webhook_url, content=f"Found capacity {capacity - used}").execute()
             # Get current time
             current_time = datetime.now().time()
 
