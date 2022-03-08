@@ -70,12 +70,12 @@ def auto_checker(
             if telegram_bot:
                 # Telegram Bot
                 if capacity - used > 0:
-                    telegram_send.send(messages=[f"Found capacity {capacity - used}"])
+                    telegram_send.send(messages=[f"{name} Found capacity {capacity - used}"])
 
             if discord_bot:
                 # Discord Bot
                 if capacity - used > 0:
-                    DiscordWebhook(url=discord_webhook_url, content=f"Found capacity {capacity - used}").execute()
+                    DiscordWebhook(url=discord_webhook_url, content=f"{name} Found capacity {capacity - used}").execute()
             # Get current time
             current_time = datetime.now().time()
 
