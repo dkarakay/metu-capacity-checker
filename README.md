@@ -1,5 +1,8 @@
 # METU Auto Capacity Checker
 
+> **Warning**
+> This method is deprecated due to new update of Sis METU. It will be updated when there is a new solution
+
 ## Installation
 
 - Download **Chrome Webdriver** or **Firefox Geckodriver**
