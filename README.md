@@ -1,5 +1,8 @@
 # METU Auto Capacity Checker
 
+![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+![image](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white)
+
 > **Warning**
 > This method is deprecated due to new update of Sis METU. It will be updated when there is a new solution
 
@@ -13,6 +16,11 @@
 - Run ```python run.py```
 - When the website is loaded correctly, type ```ok``` in terminal and hit enter
 - Enjoy ☕️
+
+## Sound Based Feedback
+- For MacOS, it is already provided
+- For Windows users, **pip install winsound**
+  - e.g. ```winsound.Beep(440,1000) # freq 440, 1000ms ```
 
 ## Telegram Installation
 
