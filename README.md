@@ -1,10 +1,10 @@
-# METU Auto Capacity Checker
+# METU Auto Capacity Checker 
+
+> **Warning**
+> Currently use this system to check the change of course capacity.
 
 ![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![image](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white)
-
-> **Warning**
-> This method is deprecated due to new update of Sis METU. It will be updated when there is a new solution
 
 ## Installation
 
