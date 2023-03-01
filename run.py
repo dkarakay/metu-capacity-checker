@@ -1,12 +1,12 @@
 from core.main import auto_checker_capacity
 
-semester = '20212'  # 2021-2022 Spring
-department_code = '567'  # Electrical Electronics Engineering
-class_code = '314'  # Digital Circuits Laboratory
-section_no = 8  # Section 8
+semester = '20222'  # 2021-2022 Spring
+department_code = '651'  # Electrical Electronics Engineering
+class_code = '242'  # Digital Circuits Laboratory
+section_no = 1  # Section 8
 
-driver_path = "/Users/sedna/chromedriver"
-refresh_rate = 7  # Check each 7 seconds
+driver_path = "/Users/sedna/local-dev/chromedriver"
+refresh_rate = 4  # Check each 7 seconds
 
 discord_webhook_url = 'https://discord.com/api/webhooks/xxxx'
 
@@ -35,7 +35,7 @@ auto_checker_capacity(
     refresh_rate=refresh_rate,
     section_no=section_no,
     semester=semester,
-    telegram_bot=False,
+    #telegram_bot=False,
     voice_feedback=True,
     first_time=True,
 )

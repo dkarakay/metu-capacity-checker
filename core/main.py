@@ -1,7 +1,7 @@
 import time
 import os
 
-import telegram_send
+#import telegram_send
 from discord_webhook import DiscordWebhook
 from selenium import webdriver
 from datetime import datetime
@@ -159,15 +159,15 @@ def auto_checker_capacity(
 
             if voice_feedback:
                 # Voice feedback for macOS
-                if capacity == 0:
-                    os.system('say "0 capacity"')
-                elif original_capacity != capacity:
+                #if capacity == 0:
+                    #os.system('say "0 capacity"')
+                if original_capacity != capacity:
                     os.system(f'say "Found capacity {capacity - original_capacity}"')
 
-            if telegram_bot:
+            #if telegram_bot:
                 # Telegram Bot
-                if original_capacity != capacity:
-                    telegram_send.send(messages=[f"{name} Found capacity {capacity - original_capacity}"])
+            #    if original_capacity != capacity:
+            #        telegram_send.send(messages=[f"{name} Found capacity {capacity - original_capacity}"])
 
             if discord_bot:
                 # Discord Bot
