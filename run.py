@@ -1,8 +1,8 @@
 from core.main import auto_checker_capacity
 
 semester = '20222'  # 2021-2022 Spring
-department_code = '651'  # Electrical Electronics Engineering
-class_code = '242'  # Digital Circuits Laboratory
+department_code = '460'  # Electrical Electronics Engineering
+class_code = '486'  # Digital Circuits Laboratory
 section_no = 1  # Section 8
 
 driver_path = "/Users/sedna/local-dev/chromedriver"
@@ -35,7 +35,7 @@ auto_checker_capacity(
     refresh_rate=refresh_rate,
     section_no=section_no,
     semester=semester,
-    #telegram_bot=False,
     voice_feedback=True,
     first_time=True,
+    #telegram_bot=False,
 )
